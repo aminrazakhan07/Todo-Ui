@@ -26,23 +26,32 @@ import 'package:flutter/material.dart';
 //////////  Get Students Data From Home
 
 class StdAbout extends StatelessWidget {
-  final Map stdData;
-  const StdAbout({super.key, required this.stdData, required studentData});
+  final Map stdDetail;
+  const StdAbout({super.key, required this.stdDetail, required studentData});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        padding: const EdgeInsets.only(left: 15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(stdData['name']),
-            Text(stdData['cours']),
-            Text(stdData['sec']),
-          ],
-        ),
+      appBar: AppBar(
+        backgroundColor: Colors.amber,
+      ),
+      body: Column(
+        children: [
+          Container(
+            height: 100,
+            color: Colors.blue,
+            padding: const EdgeInsets.only(left: 15, top: 25),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(stdDetail['name']),
+                Text(stdDetail['cours']),
+                Text(stdDetail['sec']),
+                ////
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -74,7 +74,7 @@ class _StudentsListState extends State<StudentsList> {
                     MaterialPageRoute(
                         builder: (context) => StdAbout(
                               studentData: studentInfo[index],
-                              stdData: const {},
+                              stdDetail: const {},
                             )));
               },
               tileColor: Colors.amber,
